@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Topic</title>
+</head>
+<body>
+        <div id="page">
+            <h1 style="background-color: aqua;padding: 20px;">Its Bikkyy</h1>
+            <button id="stop">STOP</button>
+        </div>
+</body>
+<script>
+    const text=document.querySelector('h1')
+    const chng=function(){
+        text.innerHTML="No its Lalit"
+    }
+    const tm=setInterval(chng,3000)
+    const st=document.querySelector('#stop')
+    document.querySelector('#page').addEventListener('click',function(e)
+    {
+        if(e.target.id==='stop')
+        {
+            clearTimeout(tm)
+        }  
+})
+</script>
+</html>

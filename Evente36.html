@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div>
+        <ul id="images">
+            <li id="japan"><img src="1sazxvbi.bmp" alt="" width="200px"></li>
+            <li id="river"><img src="river.bmp" alt="" width="200px"></li>
+            <li id="owl"><img src="owl.bmp" alt="" width="200px"></li>
+            <li id="monkey"><img src="monkey.bmp" alt="" width="200px"></li>
+            <li id="google"><a href="https://www.google.com" >for go to google</a></li>
+        </ul>
+    </div>
+ </body>
+ <script>
+    // document.querySelector('#images').addEventListener("click",function(e){
+    //     // console.log(e.target);
+    //     console.log("Image clicked !!!");
+    // })
+    // document.querySelector('#owl').addEventListener("click",function(e){
+    //     // console.log(e.target);
+    //     e.stopPropagation();//this method use for prevent default performance
+    //     console.log("owl clicked")})
+    document.querySelector('#images').addEventListener("click",function(e){
+       
+       if(e.target.tagName==='IMG')//Only remove when tag name is IMG
+       { const removeit=e.target.parentNode
+        removeit.remove()
+       }
+        //Another method
+        // const rem=e.target
+        // rem.parentNode.removeChild(rem)
+    })
+
+    
+ </script>
+ </html>

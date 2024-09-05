@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>January 12</title>
+
+ </head>
+ <body class="moon">
+   <div>
+      <h2 id="intro">Introduction to Dom Selecter </h2>
+      <h2>didsf sdfisf skfdb</h2>
+      <h2>iwudf foif idfh</h2>
+      <h2>iuhaf iohsfo oihofh</h2>
+      <h2>sh oihf oih efhwf</h2>
+
+   </div>
+  <div class="parent">
+   <div class="day">Monday</div>
+   <div class="day">Tuesday</div>
+   <div class="day">Wednesday</div>
+   <div class="day">Thursday</div>
+   <div class="day">Friday</div>
+  </div>
+
+ </body>
+ <script>
+   const z=document.getElementById('intro')
+   /*it give the element of given id if more than one id of same name available
+   then it select the first one */
+
+   /* const z=document.getElementById('intro').id
+      it give the id name
+
+      const z=document.getElementById('intro').className
+      it give the class name
+
+      const z=document.getElementById('intro').getAttribute('id')
+      it give the id name 
+      document.getElementById('intro').setAttribute('id','head')
+      it set the attribute of the select element (id=head)
+
+   */
+
+
+
+   /* const x=document.querySelector('h2')
+   it select the 1st element of the selected element 
+   */
+
+   const x=document.querySelectorAll('h2')
+   /* it select all the element as nodelist */
+
+   const y=document.getElementsByClassName('moon')
+   /*it return a html collection of element of specified class name 
+   it's a read only property we have to make it array */
+  
+    x[0].style.color="green"
+    y[0].style.backgroundColor="violet"
+   for(let i=0;i<x.length;i++)
+   {
+      if(i%2==0)
+      {
+         x[i].style.backgroundColor="red"
+      }
+      else{
+            x[i].style.backgroundColor="yellow"
+          }
+   }
+    const parent=document.querySelector(".parent")
+    /* it select the 1st element of css selector */
+
+    parent.children[2].style.backgroundColor="red"
+    parent.firstElementChild.style.backgroundColor="green"
+    parent.lastElementChild.style.backgroundColor="aqua"
+    const dayOne=document.querySelector('.day')
+    dayOne.nextElementSibling.style.color="blue"
+    
+</script>
+ </html>

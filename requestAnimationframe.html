@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="container">
+  <div id="mydiv" style="position:absolute"></div>
+</div>
+<style>
+ body{
+  background-color: #f610f6;
+ }
+  
+   /* #mydiv{
+      /* position: fixed;
+        width: 100px;
+        height: 100vh;
+        border:2px solid red;
+        border-radius: 5px;
+        background-color: #0ac8ee;
+
+
+        /* animation:mydiv 5s infinite ease-in ; */
+    /*}
+   /* @keyframes mydiv {
+    0%{
+      left: 1500px;
+    }
+    100%{
+      left: -110px;
+    } */
+    
+</style>
+<script>
+ /* var adiv = document.getElementById("mydiv");*/
+//  let leftpos = 0; 
+ let pipe_separation=0
+ const div=document.createElement('div')
+function movediv(){
+    if(pipe_separation>115)
+        {
+            pipe_separation=0
+            div.setAttribute('id','pole')
+            div.style.height='400px'
+            div.style.width='150px'
+            div.style.backgroundColor='white'
+            div.style.top='50px'
+            div.innerText='Poolllll'
+            div.style.position='fixed'
+            div.style.left='80vw';
+            // document.body.style.display="block"
+            document.body.appendChild(div)
+            // leftpos +=1;
+        } 
+        pipe_separation++
+    requestAnimationFrame(movediv); 
+  }
+   requestAnimationFrame(movediv); 
+// const id=setInterval(requestAnimationFrame(movediv),1500)
+/* The requestAnimationFrame() method tells the browser that you wish to perform an animation 
+and requests that the browser 
+call a specified function to update an animation before the next repaint.
+Your callback routine must itself call requestAnimationFrame() if you want to animate another frame at the next repaint.
+
+Tip: You should call this method whenever you are ready to update your animation onscreen because:*/
+</script>
+
+</body>
+</html>
